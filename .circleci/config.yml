@@ -28,12 +28,12 @@ jobs:
           command: |
             node -v
 workflows:
-  Example-Workflows:
+  Example-Workflow:
     jobs:
       - Hello-World
       - Fetch-Code:
           requires:
             - Hello-World
-        Using-Node:
+      - Using-Node:
           requires:
             - Fetch-Code
